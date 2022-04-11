@@ -21,9 +21,20 @@ public class PlaceObjectOnTracker : MonoBehaviour
 
     private void OnTrackedImageChange(ARTrackedImagesChangedEventArgs args)
     {
+        
         for(int i = 0;i < args.added.Count;i++)
         {
             Instantiate(cubePrefab, args.added[i].transform);
+        }
+
+        for(int i = 0;i < args.updated.Count;i++)
+        {
+
+        }
+
+        for(int i = 0;i < args.removed.Count;i++)
+        {
+
         }
     }
 }
